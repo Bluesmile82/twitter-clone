@@ -1,0 +1,9 @@
+<h1>Update profile</h1>
+<%= form_for @user, url: "/profile/#{current_user.id}" do |f| %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+  <br/>
+  <%= f.submit "Update", class: "btn" %>
+<% end %>
